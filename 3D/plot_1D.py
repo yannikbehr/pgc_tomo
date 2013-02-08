@@ -18,38 +18,6 @@ from subprocess import *
 import numpy as np
 from numpy.random import random_integers
 from minmax_mdl import minmax_mdl
-# def plot_hist(gmt,widgets,models,nd,ne):
-#    """
-#    Calculate histogram for Moho depth and corresponding gaussian
-#    curve.
-#    """
-#    nmdl = zeros((nd,ne+1))
-#    for _j in range(ne+1):
-#        for _k in range(nd):
-#            nmdl[_k,_j]=models[_j*nd+_k]
-#    md,x,patches = hist(nmdl[0,:]+nmdl[1,:]+nmdl[2,:],100,normed=1)
-#    vs0,xs0,patches = hist(nmdl[8,:],100,normed=1)
-#    vs1,xs1,patches = hist(nmdl[9,:],100,normed=1)
-#    vs2,xs2,patches = hist(nmdl[10,:],100,normed=1)
-#    vs3,xs3,patches = hist(nmdl[11,:],100,normed=1)
-#    rng = '10/40/0./%f'%(md.max())
-#    gmt.psxy(R=rng,B='a5f1:Moho depth [km]:/a%ff%fWeSn'%(10,5),W='3,black,',in_columns=[x[1:],md],*widgets[3].XYJ())
-#    rng = '1/5/0./%f'%(vs0.max())
-#    gmt.psxy(R=rng,B='a1f.5:Vs0 [km/s]:/a%ff%fWeSn'%(10,5),W='3,black,',in_columns=[xs0[1:],vs0],*widgets[4].XYJ())
-#    rng = '1/5/0./%f'%(vs1.max())
-#    gmt.psxy(R=rng,B='a1f.5:Vs1 [km/s]:/a%ff%fWeSn'%(10,5),W='3,black,',in_columns=[xs1[1:],vs1],*widgets[5].XYJ())
-#    rng = '1/5/0./%f'%(vs2.max())
-#    gmt.psxy(R=rng,B='a1f.5:Vs2 [km/s]:/a%ff%fWeSn'%(10,5),W='3,black,',in_columns=[xs2[1:],vs2],*widgets[6].XYJ())
-#    #return x[1:],md,xs0[1:],vs0,xs1[1:],vs1,xs2[1:],vs2,xs3[1:],vs3
-
-
-# def hist_v(models,nd,ne,nlayer):
-#    nmdl = zeros((nd,ne+1))
-#    for _j in range(ne+1):
-#        for _k in range(nd):
-#            nmdl[_k,_j]=models[_j*nd+_k]
-#    for _l in xrange(nlayer):
-#        pass
 
 def dissect_fname(fn):
     """
