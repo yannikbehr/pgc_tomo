@@ -211,7 +211,7 @@ def plot_rep(repfile, paramfile, wtype, pixfile, show=True, misfit=0.1,
         gmt.xyz2grd(xyz, G=grd, R=rng, I='%f/%f' % (sreso, dreso), out_discard=True)
         gmt.grd2cpt(grd, L='0/%d' % 3000, C="wysiwyg", D=True, Z=True, out_filename=grdcpt)
         gmt.psbasemap(R=True, B='a1f.5:S-velocity [km/s]:/a10f5:Depth [km]:WnSe', *widget.XYJ())
-        gmt.psmask(xyz2, R=True, T=True, I='%f/%f' % (sreso, dreso), G='lightgray', *widget.XYJ())
+        # gmt.psmask(xyz2, R=True, T=True, I='%f/%f' % (sreso, dreso), G='lightgray', *widget.XYJ())
         gmt.grdimage(grd, R=True, Q=True, C=grdcpt, *widget.XYJ())
         gmt.psxy(R=True, B=True, W='3,black', in_columns=[smean, -dmean], *widget.XYJ())
         bmdl = get_best_model(repfile, dreso, dmax=120., dmin=0.)
